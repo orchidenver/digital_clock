@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&family=Oswald:wght@500&family=Prompt&family=Questrial&display=swap");
+/* COLORS AND FONTS*/
+:root {
+  --bgc-light-theme: #c5b9cd;
+  --bgc-dark-theme: #92a8d1;
+  --clock-color-light-theme: #dec2cb;
+  --clock-color-dark-theme: #c5b9cd;
+  --clock-border-light-theme: #abb1cf;
+  --clock-border-dark-theme:#7a7f94;
+  --exo-font: 'Exo 2', sans-serif;
+  --prompt-font: 'Prompt', sans-serif;
+}
+
+/* FUNCTIONS */
+/* CLOCKS */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bgc-light-theme);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#clock {
+  width: 25vw;
+  height: 25vw;
+  min-width: 290px;
+  min-height: 290px;
+  border: 10px solid var(--clock-border-light-theme);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--clock-color-light-theme);
+}
+
+.clock__container {
+  width: 40%;
+  background-color: #fff;
+}
+
+.clock__head {
+  margin: 0;
+  font-family: var(--prompt-font);
+  font-size: 3vmax;
+}
+
+.clock__time {
+  text-align: center;
+  margin: 1vh 0 1vh 0;
+  font-family: var(--exo-font);
+  font-size: 3vmax;
+}
+
+.clock__date {
+  text-align: center;
+  margin-bottom: 1vh;
+  font-family: var(--exo-font);
+  font-size: 3vmax;
+}
+
+.clock__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+button {
+  width: 10vh;
+  height: 5vh;
+  background-color: var(--clock-color-light-theme);
+  margin: 2rem 1rem 0 0;
+  border-radius: 32px;
+  text-align: center;
+  border: transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  -webkit-box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.2), 6px 6px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.2), 6px 6px 10px rgba(0, 0, 0, 0.2);
+  color: #000000;
+  font-size: 1.5vh;
+  font-family: var(--exo-font);
+}
+
+button:hover {
+  opacity: 0.3;
+  -webkit-box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  opacity: 1;
+  -webkit-box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5), inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+          box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5), inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+/* ADAPTIVE */
+@media screen and (min-width: 768px) {
+  .clock__head, .clock__time, .clock__date {
+    font-size: 2.5vmin;
+  }
+}
+/*# sourceMappingURL=style.css.map */
